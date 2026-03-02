@@ -1,0 +1,269 @@
+# Ghost-Phishing-Tools .gitignore
+# Files dan directories yang tidak harus di-track
+
+# ===================== GENERATED FILES =====================
+# Database logs dan dumps
+database_audit.txt
+*.sql
+*.sql.gz
+
+# Tunnel logs
+.tunnel.log
+tunnel.log
+
+# Web files generated oleh tool (uncomment jika ingin exclude)
+# web_files/facebook/*
+# web_files/gmail/*
+# web_files/github/*
+# web_files/tiktok/*
+# Note: Uncomment ke atas untuk exclude auto-generated templates
+
+# ===================== SENSITIVE DATA =====================
+# Credentials dan passwords
+*.key
+*.pem
+*.crt
+.env
+.env.local
+.env.*.local
+
+# Config files dengan sensitive info
+config.php
+config.js
+*.config
+
+# ===================== SYSTEM FILES =====================
+# OS-specific files
+.DS_Store
+Thumbs.db
+.thumbs.db
+*.bak
+*.swp
+*.swo
+*~
+.#*
+
+# Windows specific
+*.exe
+*.bat
+*.cmd
+desktop.ini
+ehthumbs.db
+
+# macOS specific
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux specific
+.cache
+.local
+*.o
+*.a
+
+# ===================== EDITOR FILES =====================
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim/Neovim
+.vim/
+.nvim/
+.swp
+.swo
+
+# Emacs
+*~
+*#
+.#*
+
+# IDE
+.idea/
+*.iml
+.iws
+.classpath
+.project
+.c9/
+
+# ===================== DEVELOPMENT FILES =====================
+# Node modules & npm
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+dist/
+build/
+
+# Dependency lock files
+Pipfile.lock
+poetry.lock
+composer.lock
+
+# ===================== BUILD & TEMP =====================
+# Build outputs
+dist/
+build/
+out/
+*.tar
+*.tar.gz
+*.zip
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Logs
+*.log
+logs/
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===================== TESTING FILES =====================
+# Test coverage
+coverage/
+.coverage
+.nyc_output/
+junit.xml
+
+# Test artifacts
+test-results/
+*.test.log
+
+# ===================== CACHE FILES =====================
+.cache/
+cache/
+*.cache
+
+# MySQL cache
+*.frm
+mysql-test/
+ibtmp1
+
+# PHP session files
+session/
+sessions/
+
+# ===================== ARCHIVES & BACKUPS =====================
+*.backup
+backup/
+backups/
+*.bkp
+*.bak
+
+# Version control merges
+*.orig
+*.rej
+
+# ===================== SENSITIVE PATTERNS =====================
+# Don't commit any data captures
+data_*/
+captures/
+results/
+
+# Don't commit private keys or certificates
+private/
+secrets/
+sensitive/
+
+# Don't commit database backups dengan data real
+*_backup.sql
+*_dump.sql
+
+# ===================== PLATFORM-SPECIFIC =====================
+# Termux
+termux-properties.conf
+
+# Windows Defender
+[Dd]esktop.ini
+
+# ===================== CUSTOM FILES =====================
+# Project-specific exclusions
+custom_*/
+private_*/
+
+# Custom credentials
+.creds
+.passwords
+*.creds
+
+# ===================== DOCUMENTATION =====================
+# Temporary docs
+docs_temp/
+*.md~
+NOTES.md
+
+# ===================== ADDITIONAL SECURITY =====================
+# SSH keys
+.ssh/
+id_rsa
+id_rsa.pub
+known_hosts
+
+# API keys
+api_keys.txt
+keys.json
+tokens.txt
+
+# Credentials export
+*.csv
+export/
+
+# ===================== WHITELIST (Pattern to NOT ignore) =====================
+# Keep these important files
+!README.md
+!INSTALLATION.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!SECURITY.md
+!LICENSE
+!.gitignore
+!.github/
+
+# Keep documentation
+!docs/
+!img/
+!img/sample.png
+
+# Keep template examples
+!examples/
+!templates/
+
+# ===================== ADDITIONAL PATTERNS =====================
+# Don't ignore hidden files unless specified
+# But ignore common problematic ones
+.git/**
+.gitmodules
+.gitattributes
+
+# ===================== COMMENTS =====================
+# NOTE: Uncomment any lines above jika Anda ingin exclude files
+# yang tidak seharusnya di-commit ke repository.
+# 
+# IMPORTANT: web_files/ biasanya HARUS di-track (uncomment rules di atas)
+# karena berisi template yang diperlukan tool untuk function.
+# 
+# Jika ingin exclude specific web_files untuk environment tertentu:
+# web_files/custom_web_here/
+# But keep template directories:
+# !web_files/facebook/
+# !web_files/gmail/
+# !web_files/github/
+# !web_files/tiktok/
+
